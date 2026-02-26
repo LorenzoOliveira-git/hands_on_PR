@@ -1,75 +1,326 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Página HTML</title>
+    <link rel="shortcut icon" href="./assets/icons/IconGitInit.png" type="image/x-icon">
+    <title>Projeto Git Init</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: permanent marker, cursive;
             background-color: #f4f4f9;
             margin: 0;
             padding: 0;
         }
+
         header {
-            background-color: #4CAF50;
+            background-color: #333333f8;
             color: white;
             padding: 15px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
+            display: flex;
+            gap: 400px;
             position: fixed;
-            bottom: 0;
             width: 100%;
+            top: 0;
         }
-        .btn {
-            background-color: #4CAF50;
+
+        .logo {
+            margin-left: 10px;
+        }
+
+        img {
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+
+        span {
+            font-size: 1.8em;
+            font-weight: bold;
+            position: relative;
+            top: -13px;
+        }
+
+        header>nav>ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            font-size: 1.6em;
+        }
+
+        header>nav>ul>li>a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        header>nav>ul>li>a:hover {
+            background-color: #555555;
+            border-radius: 15px;
+        }
+
+        .Sobre {
+            padding: 20px;
+            width: 50%;
+            margin: 13% auto;
+            background-color: white;
+            border-radius: 3em;
+            box-shadow: 10px 10px 5px #383838;
+        }
+
+        section>h2,
+        p {
+            text-align: center;
+        }
+
+        section>p {
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        ul {
+            margin-left: 14.3em;
+            padding-left: 20px;
+            width: max-content;
+        }
+
+        .section1 {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-around;
+            gap: 50px;
+            margin: 15% auto;
+            width: 80%;
+        }
+
+        .section1 > img {
+            width: 60%;
+            height: auto;
+            border-radius: 1em;
+        }
+
+        .section1 > .content {
+            width: 50%;
+            text-align: center;
+        }
+
+        .section1 > .content > h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section1 > .content > p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .section1 > .content > a {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .section1 > .content > a > button {
+            font-family: permanent marker, cursive;
+            background-color: #333;
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             text-align: center;
-            display: inline-block;
+            border-radius: 1em;
         }
-        .btn:hover {
-            background-color: #45a049;
+
+        .section1 > .content > a > button:hover {
+            background-color: #555555;
+        }
+
+        .section2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            gap: 50px;
+            margin: 15% auto;
+            width: 80%;
+        }
+
+        .section2 > img {
+            width: 60%;
+            height: auto;
+            border-radius: 1em;
+        }
+
+        .section2 > .content {
+            width: 50%;
+            text-align: center;
+        }
+
+        .section2 > .content > h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section2 > .content > p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .section2 > .content > a {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .section2 > .content > a > button {
+            font-family: permanent marker, cursive;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 1em;
+        }
+
+        .section2 > .content > a > button:hover {
+            background-color: #555555;
+        }
+
+        .section3 {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-around;
+            gap: 50px;
+            margin: 15% auto;
+            width: 80%;
+        }
+
+        .section3 > img {
+            width: 60%;
+            height: auto;
+            border-radius: 1em;
+        }
+
+        .section3 > .content {
+            width: 50%;
+            text-align: center;
+        }
+
+        .section3 > .content > h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section3 > .content > p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .section3 > .content > a {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .section3 > .content > a > button {
+            font-family: permanent marker, cursive;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 1em;
+        }
+
+        .section3 > .content > a > button:hover {
+            background-color: #555555;
+        }
+
+        footer {
+            background-color: #333333f8;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Bem-vindo ao Projeto de Pull Request</h1>
-</header>
+    <header>
+        <div class="logo">
+            <img src="./assets/icons/IconGitInit.png" alt="Logo_Site" width="75" height="50">
+            <span>Git Init</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="informacoes.html">Conteúdos</a></li>
+                <li><a href="handsOn.html">Exercícios</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <section>
-        <h2>Sobre o Projeto</h2>
-        <p>Este projeto tem como objetivo ensinar o fluxo de trabalho do GitHub, incluindo a criação de branches, commits, Pull Requests e revisões de código.</p>
-    </section>
+    <main>
+        <div class="Sobre">
+            <section>
+                <h2>Sobre o Projeto</h2>
+                <p>Este projeto tem como objetivo ensinar o fluxo de trabalho do GitHub, incluindo a criação de
+                    branches,
+                    commits, Pull Requests e revisões de código.</p>
+            </section>
 
-    <section>
-        <h2>Funcionalidades</h2>
-        <ul>
-            <li>Visualização de páginas HTML simples.</li>
-            <li>Interação com formulários.</li>
-            <li>Design simples e responsivo.</li>
-        </ul>
-    </section>
+            <section>
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li>Visualização de páginas HTML simples.</li>
+                    <li>Interação com formulários.</li>
+                    <li>Design simples e responsivo.</li>
+                </ul>
+            </section>
+        </div>
 
-    <button class="btn">Clique aqui para aprender mais!</button>
-</main>
+        <section class="section1">
+            <div class="content">
+                <h2>Pull Requests</h2>
+                <p>Pull Request é uma maneira de trabalhar com grupos de desenvolvimento. Sua principal diferença é a
+                    revisão de alterações, onde o admin da aplicação irá aceitar ou rejeitar suas features novas. Aqui
+                    você aprenderá o conceito e entenderá na prática como esse estilo de organização funciona!</p>
+                <a href="informacoes.html"><button>Saiba Mais</button></a>    
+                <a href="handsOn.html"><button>Fazer exercícios</button></a>
+            </div>
+            <img src="./assets/icons/PullRequest.png" alt="Img_PullRequest">
+        </section>
 
-<footer>
-    <p>&copy; 2025 Projeto GitHub PR - Todos os direitos reservados.</p>
-</footer>
+        <section class="section2">
+            <div class="content">
+                <h2>Merge</h2>
+                <p>Merge é uma maneira de juntar alterações feitas entre integrantes do grupo. Sua principal diferença é a integração entre diferentes branch do projeto, mantendo uma organização modular. Vamos aprender na teoria e na prática como esse estilo de organização funciona!</p>
+                <a href="informacoes.html"><button>Saiba Mais</button></a>    
+                <a href="handsOn.html"><button>Fazer exercícios</button></a>
+            </div>
+            <img src="./assets/icons/Merge.png" alt="Img_Merge">
+        </section>
+
+        <section class="section3">
+            <div class="content">
+                <h2>Rebase</h2>
+                <p>O Rebase é uma maneira diferente de fazer um merge. Sua principal diferença com o merge é sua organização linear. Aqui você aprenderá o conceito e entenderá na prática como esse estilo de organização funciona!</p>
+                <a href="informacoes.html"><button>Saiba Mais</button></a>    
+                <a href="handsOn.html"><button>Fazer exercícios</button></a>
+            </div>
+            <img src="./assets/icons/Rebase.png" alt="Img_Rebase">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Projeto GitHub PR - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
+
 </html>
