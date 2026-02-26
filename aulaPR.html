@@ -15,11 +15,14 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #333333f8;
             color: white;
             padding: 15px;
             display: flex;
             gap: 400px;
+            position: fixed;
+            width: 100%;
+            top: 0;
         }
 
         .logo {
@@ -59,7 +62,7 @@
         .Sobre {
             padding: 20px;
             width: 50%;
-            margin: 6% auto;
+            margin: 13% auto;
             background-color: white;
             border-radius: 3em;
             box-shadow: 10px 10px 5px #383838;
@@ -183,8 +186,59 @@
             background-color: #555555;
         }
 
-        footer {
+        .section3 {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-around;
+            gap: 50px;
+            margin: 15% auto;
+            width: 80%;
+        }
+
+        .section3 > img {
+            width: 60%;
+            height: auto;
+            border-radius: 1em;
+        }
+
+        .section3 > .content {
+            width: 50%;
+            text-align: center;
+        }
+
+        .section3 > .content > h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section3 > .content > p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .section3 > .content > a {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .section3 > .content > a > button {
+            font-family: permanent marker, cursive;
             background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 1em;
+        }
+
+        .section3 > .content > a > button:hover {
+            background-color: #555555;
+        }
+
+        footer {
+            background-color: #333333f8;
             color: white;
             text-align: center;
             padding: 5px;
@@ -269,6 +323,16 @@
                 <a href="handsOn.html"><button>Fazer exercícios</button></a>
             </div>
             <img src="./assets/icons/Merge.png" alt="Img_Merge">
+        </section>
+
+        <section class="section3">
+            <div class="content">
+                <h2>Rebase</h2>
+                <p>O Rebase é uma maneira diferente de fazer um merge. Sua principal diferença com o merge é sua organização linear. Aqui você aprenderá o conceito e entenderá na prática como esse estilo de organização funciona!</p>
+                <a href="informacoes.html"><button>Saiba Mais</button></a>    
+                <a href="handsOn.html"><button>Fazer exercícios</button></a>
+            </div>
+            <img src="./assets/icons/Rebase.png" alt="Img_Rebase">
         </section>
     </main>
 
