@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands On</title>
+    <style>
+        * {
+            margin: 0;
+            top: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: permanent marker, cursive;
+        }
+
+        :root {
+            --primary-color: #f4f4f9;
+            --secondary-color: #333;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            height: 10vh;
+            background-color: var(--secondary-color);
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 3px 3px 5px var(--primary-color);
+        }
+
+        header>nav>ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        header>nav>ul>li {
+            background-color: color-mix(in srgb,
+                    var(--secondary-color) 90%, white 10%);
+            padding: 10px;
+        }
+
+        header>nav>ul>li:hover {
+            background-color: color-mix(in srgb,
+                    var(--secondary-color) 80%, white 20%);
+            cursor: pointer;
+        }
+
+        header>nav>ul>li>a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        main {
+            width: 50vw;
+            margin: 5vh auto 5vh;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        h3{
+            font-size: 24px;
+        }
+
+        .big-letter {
+            font-size: 20px;
+        }
+
+        section {
+            display: flex;
+            gap: 5vw;
+            align-items: center;
+        }
+
+        section>.with-image {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 400px;
+        }
+        
+        section > div{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        section>img {
+            width: 22vw;
+            min-width: 200px;
+            border: solid 2px black;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        #finish:hover {
+            background-color: color-mix(in srgb,
+                    var(--secondary-color) 80%, white 20%);
+            cursor: pointer;
+        }
+
+        #finish {
+            background-color: color-mix(in srgb,
+                    var(--secondary-color) 90%, white 10%);
+            padding: 10px;
+            color: white;
+            width: fit-content;
+            text-decoration: none;
+            margin: auto;
+        }
+
+
+        @media(max-width: 500px) {
+            header {
+                flex-direction: column;
+                height: 16vh;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            main {
+                width: 80vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hands On - Pull Requests</h1>
+        <nav>
+            <ul>
+                <li><a href="./aulaPR.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="with-image">
+                <h3>Grupo</h3>
+                <p class="big-letter">Chame seus amigos para praticar essa atividade, é necessário no mínimo três
+                    pessoas para realizar
+                    essa
+                    atividade.</p>
+            </div>
+            <img src="./assets/img/friendship.webp" alt="Imagem representativa de amizade">
+        </section>
+        <section>
+            <div>
+                <h3>Funções</h3>
+                <p><strong>Líder:</strong> deve haver apenas um por grupo, será responsável por coordenar o grupo,
+                    revisar
+                    as PRs de todos e garantir que o processo esteja sendo seguido.</p>
+                <p><strong>Desenvolvedores:</strong> são os outros integrantes, que são responsáveis por implementar uma
+                    funcionalidade
+                    mais complexa ou por definir uma parte importante do projeto (ex: criar o
+                    layout de uma página ou adicionar uma nova feature) e testar a aplicação
+                    localmente.</p>
+            </div>
+        </section>
+        <section>
+            <img src="./assets/img/github-icon.webp" alt="Logo do Git Hub" style="border: none;">
+            <div class="with-image">
+                <h3>Repositório</h3>
+                <p>Deve cirar um repoitório (remoto e local) e inserir o arquivo html que pode ser acessado pelo
+                    botãoabaixo
+                    e compartilhar com os colegas do grupo
+                </p>
+                <a href="https://drive.google.com/file/d/1JkIt0YmygQdBB9hUqAHk_rM36WYMYusl/view" target="_blank">Clique
+                    aqui para acessar o arquivo html</a>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Branchs</h3>
+                <p>Cada desenvolvedor deve criar uma Branch para criar alterações no projeto. A
+                    Branch deve ter um verbo e um nome relacionado à alteração, por exemplo: adicionar-formulário</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Commits</h3>
+                <p>Cada membro trabalha na sua parte do código e ao concluir as alterações, eles
+                    fazem commit regularmente, com mensagens de commit claras, como:
+                </p>
+                <ul>
+                    <li>"Adiciona formulário de contato"</li>
+                    <li>"Ajusta layout da página de contato"</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Pull Requests</h3>
+                <p> Depois de realizar os commits, os integrantes devem enviar suas alterações (push)
+                    para o GitHub. Isso torna as alterações acessíveis aos outros membros do
+                    grupo.</p>
+            </div>
+        </section>
+        <section>
+            <img src="./assets/img/pencil.png" alt="Imagem representativa de uma revisão" style="border: none;">
+            <div class="with-image">
+                <h3>Início revisão</h3>
+                <p>O Líder do grupo irá acessar os Pull Requests criados por cada membro. Ele
+                    deve revisar o código de todos os colegas e deixar comentários construtivos e
+                    sugestões de melhoria.</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Término revisão</h3>
+                <p> Quando as alterações forem aprovadas (após discussões e ajustes), o Líder de
+                    Projeto pode realizar o merge da branch de cada membro com a branch
+                    principal
+                </p>
+            </div>
+        </section>
+        <a href="./aulaPR.html" id="finish">Terminar atividade</a>
+    </main>
+    <footer>
+        <p>2025 Projeto GitHub PR - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
