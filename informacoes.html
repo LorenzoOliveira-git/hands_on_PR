@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull Requests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            overflow: scroll;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+        }
+        p, h2 {
+            width: 50vw;
+        }
+        img {
+            width: 50vw;
+            border-radius: 15px;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            color: white;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            width: 100%;
+        }
+        .code {
+            background-color: rgb(230, 230, 230);
+            border-radius: 5px;
+            text-align: left;
+            padding: 0.5em;
+            width: 50vw;
+        }
+        .blue {
+            color: blue;
+        }
+        .orange {
+            color: rgb(255, 38, 0);
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Como funcionam as Pull Requests?</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Branches</h2>
+        <p>
+            A base de toda PR (Pull Request) é o trabalho separado em branches.
+            Começamos por criar uma nova branch para a adição de uma feature nova, 
+            correção, ou reestilização de uma página existente.
+        </p>
+        <p class="code"><code>$ <span class="blue">git</span> <span class="orange">checkout</span> <span class="green">-b</span> 'adicionar-feature'</code></p>
+    </section>
+
+    <section>
+        <h2>Alterações, commit e push</h2>
+            <p>
+                Após a criação da nova branch, apenas adicione as mudanças ao git, dê um commit, 
+                e suba ao repositório remoto.
+            </p>
+            <p class="code">
+                <code>
+                    $ <span class="blue">git</span> <span class="orange">add</span> . <br>
+                    $ <span class="blue">git</span> <span class="orange">commit</span> <span class="green">-m</span> "feature-adicionada" <br>
+                    $ <span class="blue">git</span> <span class="orange">push</span> <span class="green">-u</span> origin adicionar-feature
+                </code>
+            </p>
+    </section>
+
+    <section>
+        <h2>Começo da Pull Request...</h2>
+        <p>
+            Ao subir as alterações para o repositório remoto, entramos no GitHub, 
+            localizamos o projeto, e naturalmente entramos na aba 'Pull Requests'.
+        </p>
+        <img src="assets/img/pr.png" alt="">
+        <p>
+            Ao entrar na página, localizamos o botão 'New pull request', e o clicamos.
+        </p>
+        <img src="assets/img/createpr.png" alt="">
+        <p>
+            Em seguida, escolhemos qual branch fará merge em qual: 
+            comumente, selecionamos a main a direita, (quem receberá o pull) e nossa branch com a alteração a esquerda.
+            Adicionamos um título, uma descrição e criamos a pull request!
+            Agora é apenas a espera pela aprovação dos colaboradores!
+        </p>
+        <img src="assets/img/compare.png" alt="">
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Projeto GitHub PR - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
