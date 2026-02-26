@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pull Requests</title>
     <style>
+        *{
+            font-family: permanent marker, cursive;
+        }
+
+        :root {
+            --primary-color: #f4f4f9;
+            --secondary-color: #333;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
@@ -13,10 +21,39 @@
             padding: 0;
         }
         header {
+            width: 100%;
             text-align: center;
-            background-color: #333;
+            height: 10vh;
+            background-color: var(--secondary-color);
             color: white;
-            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 3px 3px 5px var(--primary-color);
+        }
+        header>nav>ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        header>nav>ul>li {
+            background-color: color-mix(in srgb,
+                    var(--secondary-color) 90%, white 10%);
+            padding: 10px;
+        }
+        header>nav>ul>li:hover {
+            background-color: color-mix(in srgb,
+                    var(--secondary-color) 80%, white 20%);
+            cursor: pointer;
+        }
+
+        header>nav>ul>li>a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            height: fit-content;
+            width: fit-content;
         }
         main {
             padding: 20px;
@@ -66,6 +103,11 @@
 
 <header>
     <h1>Como funcionam as Pull Requests?</h1>
+    <nav>
+        <ul>
+            <li><a href="./aulaPR.html">Home</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
