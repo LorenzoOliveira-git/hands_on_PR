@@ -1,0 +1,57 @@
+:root {
+    --primary-color: #f4f4f9;
+    --secondary-color: #333;
+}
+
+body {
+    font-family: permanent marker, cursive;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    font-size: 1.8em;
+    font-weight: bold;
+    position: relative;
+}
+
+header>nav>ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 1.6em;
+}
+
+header>nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+header>nav>ul>li>a:hover {
+    background-color: #555555;
+    border-radius: 15px;
+}
+
+header {
+    background-color: #333333f8;
+    color: white;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo>img {
+    width: 75px;
+}
