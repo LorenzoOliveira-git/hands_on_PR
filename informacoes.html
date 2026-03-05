@@ -1,75 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icons/IconGitInit.png" type="image/x-icon">
+    <link rel="stylesheet" href="header.css">
     <title>Pull Requests</title>
     <style>
-        *{
-            font-family: permanent marker, cursive;
-        }
-
-        :root {
-            --primary-color: #f4f4f9;
-            --secondary-color: #333;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            overflow: scroll;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            width: 100%;
-            text-align: center;
-            height: 10vh;
-            background-color: var(--secondary-color);
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            box-shadow: 3px 3px 5px var(--primary-color);
-        }
-        header>nav>ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-        }
-
-        header>nav>ul>li {
-            background-color: color-mix(in srgb,
-                    var(--secondary-color) 90%, white 10%);
-            padding: 10px;
-        }
-        header>nav>ul>li:hover {
-            background-color: color-mix(in srgb,
-                    var(--secondary-color) 80%, white 20%);
-            cursor: pointer;
-        }
-
-        header>nav>ul>li>a {
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            height: fit-content;
-            width: fit-content;
-        }
         main {
             padding: 20px;
         }
+
         section {
             flex-direction: column;
             align-items: center;
             display: flex;
         }
-        p, h2 {
+
+        p,
+        h2 {
             width: 50vw;
         }
+
         img {
             width: 50vw;
             border-radius: 15px;
         }
+
         footer {
             background-color: #333;
             text-align: center;
@@ -78,9 +36,11 @@
             width: 100%;
             bottom: 0;
         }
+
         footer p {
             width: 100%;
         }
+
         .code {
             background-color: rgb(230, 230, 230);
             border-radius: 5px;
@@ -88,43 +48,53 @@
             padding: 0.5em;
             width: 50vw;
         }
+
         .blue {
             color: blue;
         }
+
         .orange {
             color: rgb(255, 38, 0);
         }
+
         .green {
             color: green;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <div class="logo">
+            <img src="./assets/icons/IconGitInit.png" alt="Logo_Site" width="75" height="50">
+            <span>Git Init</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./informacoes.html">Conteúdos</a></li>
+                <li><a href="./handsOn.html">Exercícios</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>Como funcionam as Pull Requests?</h1>
-    <nav>
-        <ul>
-            <li><a href="./aulaPR.html">Home</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <section>
-        <h2>Branches</h2>
-        <p>
-            A base de toda PR (Pull Request) é o trabalho separado em branches.
-            Começamos por criar uma nova branch para a adição de uma feature nova, 
-            correção, ou reestilização de uma página existente.
-        </p>
-        <p class="code"><code>$ <span class="blue">git</span> <span class="orange">checkout</span> <span class="green">-b</span> 'adicionar-feature'</code></p>
-    </section>
-
-    <section>
-        <h2>Alterações, commit e push</h2>
+    <main>
+        <section>
+            <h2>Branches</h2>
             <p>
-                Após a criação da nova branch, apenas adicione as mudanças ao git, dê um commit, 
+                A base de toda PR (Pull Request) é o trabalho separado em branches.
+                Começamos por criar uma nova branch para a adição de uma feature nova,
+                correção, ou reestilização de uma página existente.
+            </p>
+            <p class="code">
+                <code>$ <span class="blue">git</span> <span class="orange">checkout</span> <span class="green">-b</span> 'adicionar-feature'</code>
+            </p>
+        </section>
+
+        <section>
+            <h2>Alterações, commit e push</h2>
+            <p>
+                Após a criação da nova branch, apenas adicione as mudanças ao git, dê um commit,
                 e suba ao repositório remoto.
             </p>
             <p class="code">
@@ -134,32 +104,34 @@
                     $ <span class="blue">git</span> <span class="orange">push</span> <span class="green">-u</span> origin adicionar-feature
                 </code>
             </p>
-    </section>
+        </section>
 
-    <section>
-        <h2>Começo da Pull Request...</h2>
-        <p>
-            Ao subir as alterações para o repositório remoto, entramos no GitHub, 
-            localizamos o projeto, e naturalmente entramos na aba 'Pull Requests'.
-        </p>
-        <img src="assets/img/pr.png" alt="">
-        <p>
-            Ao entrar na página, localizamos o botão 'New pull request', e o clicamos.
-        </p>
-        <img src="assets/img/createpr.png" alt="">
-        <p>
-            Em seguida, escolhemos qual branch fará merge em qual: 
-            comumente, selecionamos a main a direita, (quem receberá o pull) e nossa branch com a alteração a esquerda.
-            Adicionamos um título, uma descrição e criamos a pull request!
-            Agora é apenas a espera pela aprovação dos colaboradores!
-        </p>
-        <img src="assets/img/compare.png" alt="">
-    </section>
-</main>
+        <section>
+            <h2>Começo da Pull Request...</h2>
+            <p>
+                Ao subir as alterações para o repositório remoto, entramos no GitHub,
+                localizamos o projeto, e naturalmente entramos na aba 'Pull Requests'.
+            </p>
+            <img src="./assets/img/pr.png" alt="">
+            <p>
+                Ao entrar na página, localizamos o botão 'New pull request', e o clicamos.
+            </p>
+            <img src="./assets/img/createpr.png" alt="">
+            <p>
+                Em seguida, escolhemos qual branch fará merge em qual:
+                comumente, selecionamos a main a direita, (quem receberá o pull) e nossa branch com a alteração a
+                esquerda.
+                Adicionamos um título, uma descrição e criamos a pull request!
+                Agora é apenas a espera pela aprovação dos colaboradores!
+            </p>
+            <img src="./assets/img/compare.png" alt="">
+        </section>
+    </main>
 
-<footer>
-    <p>&copy; 2025 Projeto GitHub PR - Todos os direitos reservados.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Projeto GitHub PR - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
+
 </html>
